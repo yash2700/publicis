@@ -65,7 +65,7 @@ $ mvn test
 
 This API exposes the following endpoint:
 
-1. **GET /v1/weather/{city}**
+1. **GET /api/weather/{city}**
 
    **Parameters:**
    - `{city}`: The name of the city for which you want the weather forecast.
