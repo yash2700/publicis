@@ -1,6 +1,5 @@
-Certainly! Here's the `README.md` for your project:
 
-```markdown
+```bash
 # Weather API
 
 This project was created as per the requirements of the assignment provided by **Publicis Sapient**. The purpose of this project is to consume the **OpenWeatherMap API** and provide a weather forecast for the next 3 days for a given city, including temperature details and recommendations based on weather conditions.
@@ -34,7 +33,7 @@ To build and run the API, use the following commands:
 ```bash
 $ cd weather-api
 $ mvn package
-$ java -jar target/weather-api-1.0.0.jar 
+$ java -jar targe/tweather-0.0.1-SNAPSHOT.jar
 ```
 
 ### 2. Running the API with Docker
@@ -44,20 +43,13 @@ Alternatively, you can run the API using Docker. The latest Docker image is alre
 To run the existing image:
 
 ```bash
-$ docker run -p 8080:8080 rantidev7/weather-api:latest
-```
-
-If you need to build a new Docker image, you can do so using **Jib** (from Maven). Run the following:
-
-```bash
-$ cd weather-api
-$ mvn jib:build
+$ docker run -p 8080:8080 yaswanth/weather-api:latest
 ```
 
 Then, run the newly built Docker image:
 
 ```bash
-$ docker run -p 8080:8080 rantidev7/weather-api:latest
+$ docker run -p 8080:8080 yaswanth/weather-api:latest
 ```
 
 ## Running Tests
@@ -90,27 +82,6 @@ To access the Swagger documentation, navigate to:
 ```
 http://localhost:8080/swagger-ui/index.html
 ```
-
-## Features in the Current Version
-
-1. **JavaDocs** are included. To generate the JavaDocs, run:
-
-   ```bash
-   $ cd weather-api
-   $ mvn javadoc:javadoc
-   ```
-
-   The generated JavaDocs will be available in `/target/site/apidocs`.
-
-2. **Google's Code Style** is enforced through the `checkstyle.xml` configuration.
-
-3. **Swagger** is included for easy testing and automatic updates to the Swagger API documentation.
-
-## Features for Future Versions
-
-1. **CI/CD** integration will be implemented to automate testing, build, and deployment processes.
-2. **Microservices architecture** will be considered in the future. This could involve using Netflix OSS components like API Gateway, Service Discovery, and Cloud Config.
-3. Support for **Spring Profiles** will be added in the future to allow for better environment configuration (e.g., dev, prod, etc.).
 
 ## License
 
